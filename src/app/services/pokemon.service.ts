@@ -10,6 +10,6 @@ export class PokemonService {
   url: string = "https://pokeapi.co/api/v2";
 
   getAllPokemon() {
-    this.http.get(`${this.url}/pokemon?limit=25`);
+    return this.http.get(`${this.url}/pokemon?limit=25`);
   }
 }
