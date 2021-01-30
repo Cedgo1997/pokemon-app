@@ -1,0 +1,37 @@
+.card {
+  background: whitesmoke;
+  display: inline-block;
+  border-radius: 10%;
+  margin: 8px;
+  max-width: 300px;
+  perspective: 1000;
+  position: relative;
+  text-align: left;
+  transition: all 0.3s 0s ease-in;
+  width: 300px;
+  z-index: 1;
+  .card-header {
+    .card-image {
+      background: rgba(0, 0, 0, 0.1);
+      height: 0;
+      padding-bottom: 75%;
+      border-radius: 10%;
+      img {
+        max-width: 300px;
+        border-radius: 10%;
+      }
+    }
+  }
+  .card-body {
+    text-align: center;
+    .card-title {
+      background: whitesmoke;
+      padding: 3px 15px 0px 10px;
+      position: relative;
+      z-index: 0;
+    }
+    .card-badge {
+      padding-bottom: 5%;
+    }
+  }
+}
