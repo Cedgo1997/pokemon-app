@@ -8,6 +8,7 @@ import { HomeComponent } from './views/home/home.component';
 import { CardComponent } from './components/card/card.component';
 import { DexComponent } from './components/dex/dex.component';
 import { BadgeComponent } from './components/badge/badge.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BadgeComponent } from './components/badge/badge.component';
     HomeComponent,
     CardComponent,
     DexComponent,
-    BadgeComponent
+    BadgeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
