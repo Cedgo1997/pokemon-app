@@ -7,6 +7,7 @@ import { DetailsComponent } from './views/details/details.component';
 import { HomeComponent } from './views/home/home.component';
 import { CardComponent } from './components/card/card.component';
 import { DexComponent } from './components/dex/dex.component';
+import { BadgeComponent } from './components/badge/badge.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DexComponent } from './components/dex/dex.component';
     DetailsComponent,
     HomeComponent,
     CardComponent,
-    DexComponent
+    DexComponent,
+    BadgeComponent
   ],
   imports: [
     BrowserModule,
