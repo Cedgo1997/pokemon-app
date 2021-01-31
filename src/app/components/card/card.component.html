@@ -1,13 +1,19 @@
-<div class="card">
-  <div class="card-header">
-    <div class="card-image">
-      <img src="./../assets/gato.jpg" alt="pokemon picture" />
+<div class="container" *ngIf="allPokemon">
+  <div class="card" *ngFor="let pokemon of allPokemon">
+    <div class="card-header">
+      <div class="card-image">
+        <img src="{{ pokemon.sprites.front_default }}" alt="pokemon picture" />
+      </div>
     </div>
-  </div>
-  <div class="card-body">
-    <h1 class="card-title">Gato pokemon <small>#1</small></h1>
-    <div class="card-badge">
-      <app-badge></app-badge>
+    <div class="card-body">
+      <h1 class="card-title">
+        {{ pokemon.name }}<small> #{{ pokemon.id }}</small>
+      </h1>
+      <div class="badge-container">
+        <div class="card-badge" *ngFor="let type of pokemon.types">
+          <app-badge [type]="type.type.name"></app-badge>
+        </div>
+      </div>
     </div>
   </div>
 </div>
