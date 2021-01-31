@@ -22,6 +22,9 @@
         border-radius: 10%;
       }
     }
+    .card-image:hover {
+      opacity: 0.5;
+    }
   }
   .card-body {
     text-align: center;
@@ -36,8 +39,12 @@
       .card-badge {
         padding-bottom: 5%;
         margin: 5%;
-        
       }
     }
   }
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
 }
