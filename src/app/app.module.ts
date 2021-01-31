@@ -1,19 +1,20 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
 
 //Modules
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
 
 // Components
-import { DetailsComponent } from './views/details/details.component';
-import { HomeComponent } from './views/home/home.component';
-import { CardComponent } from './components/card/card.component';
-import { DexComponent } from './components/dex/dex.component';
-import { BadgeComponent } from './components/badge/badge.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { DetailsComponent } from "./views/details/details.component";
+import { HomeComponent } from "./views/home/home.component";
+import { CardComponent } from "./components/card/card.component";
+import { DexComponent } from "./components/dex/dex.component";
+import { BadgeComponent } from "./components/badge/badge.component";
+import { FooterComponent } from "./components/footer/footer.component";
 
 @NgModule({
   declarations: [
@@ -23,14 +24,10 @@ import { FooterComponent } from './components/footer/footer.component';
     CardComponent,
     DexComponent,
     BadgeComponent,
-    FooterComponent
+    FooterComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
