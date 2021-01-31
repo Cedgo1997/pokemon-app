@@ -8,6 +8,7 @@ import { PokemonService } from "src/app/services/pokemon.service";
 })
 export class HomeComponent implements OnInit {
   pokemon: any[] = [];
+  filterPokemon: string = "";
   constructor(private pokemonService: PokemonService) {
     this.getAllPokemon();
   }

@@ -6,6 +6,15 @@
       border="0"
     />
   </div>
+  <div class="search-bar">
+    <input
+      type="text"
+      class="forms-control"
+      placeholder="Search by name"
+      [(ngModel)]="filterPokemon"
+      name="filterPokemon"
+    />
+  </div>
   <div class="cards">
     <app-card [pokemon]="pokemon"></app-card>
   </div>

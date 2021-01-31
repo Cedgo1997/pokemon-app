@@ -15,6 +15,7 @@ import { CardComponent } from "./components/card/card.component";
 import { DexComponent } from "./components/dex/dex.component";
 import { BadgeComponent } from "./components/badge/badge.component";
 import { FooterComponent } from "./components/footer/footer.component";
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FooterComponent } from "./components/footer/footer.component";
     DexComponent,
     BadgeComponent,
     FooterComponent,
+    FilterPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

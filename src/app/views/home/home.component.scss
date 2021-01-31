@@ -5,4 +5,10 @@
     max-width: 960px;
     text-align: center;
   }
+  input[type="text"] {
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: 0;
+  }
 }
