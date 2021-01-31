@@ -1,12 +1,20 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from "@angular/core";
 
 @Pipe({
-  name: 'filter'
+  name: "filter",
 })
 export class FilterPipe implements PipeTransform {
-
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(allPokemon: any, word: string) {
+    const newPokemon = [];
+    if (word == "") {
+      return allPokemon;
+    } else {
+      for (const pokemon of allPokemon) {
+        if (pokemon["name"].indexOf(word.toLowerCase()) > -1) {
+          newPokemon.push(pokemon);
+        }
+      }
+      return newPokemon;
+    }
   }
-
 }

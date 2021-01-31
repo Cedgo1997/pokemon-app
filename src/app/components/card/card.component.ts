@@ -13,6 +13,7 @@ import {
 })
 export class CardComponent implements OnInit {
   @Input("pokemon") allPokemon: [];
+  @Input() filterPokemon: string;
   constructor() {}
 
   ngOnInit(): void {}
