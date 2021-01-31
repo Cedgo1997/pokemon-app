@@ -7,9 +7,11 @@ import { Injectable } from "@angular/core";
 export class PokemonService {
   constructor(private http: HttpClient) {}
 
-  url: string = "https://pokeapi.co/api/v2";
+  url: string = "https://pokeapi.co/api/v2/pokemon";
 
-  getAllPokemon() {
-    return this.http.get(`${this.url}/pokemon?limit=25`);
+  // This function return only the pokemon name and detail url.
+
+  getPokemon(id: number) {
+    return fetch(`${this.url}/${id}`);
   }
 }
