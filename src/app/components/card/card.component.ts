@@ -1,10 +1,5 @@
-import {
-  AfterContentChecked,
-  AfterContentInit,
-  Component,
-  Input,
-  OnInit,
-} from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
+import { Router, Routes } from "@angular/router";
 
 @Component({
   selector: "app-card",
@@ -14,7 +9,11 @@ import {
 export class CardComponent implements OnInit {
   @Input("pokemon") allPokemon: [];
   @Input() filterPokemon: string;
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
+
+  pokemonDetail(id: string) {
+    this.router.navigate([`details/${id}`]);
+  }
 }
