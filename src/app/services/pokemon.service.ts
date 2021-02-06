@@ -11,7 +11,7 @@ export class PokemonService {
 
   // This function return only the pokemon name and detail url.
 
-  getPokemon(id: number) {
+  getPokemon(id: string | number) {
     return fetch(`${this.url}/${id}`);
   }
 }
