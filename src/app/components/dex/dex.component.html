@@ -1,28 +1,41 @@
-<div class="dex">
+<div class="dex" *ngIf="data">
   <div class="dex-left">
     <div class="dex-panel-1">
       <div class="dex-circle"></div>
     </div>
-    <div class="dex-panel-2"></div>
+    <div class="dex-panel-2">
+      <img src="{{ data.sprites.front_default }}" alt="" />
+    </div>
     <div class="dex-panel-3">
       <div id="dex-cursor-up" class="cursor">
         <i class="fa fa-arrow-up"></i>
       </div>
-      <div id="dex-cursor-right" class="cursor">
+      <div id="dex-cursor-right" class="cursor" (click)="nextPokemon()">
         <i class="fa fa-arrow-right"></i>
       </div>
       <div id="dex-cursor-down" class="cursor">
         <i class="fa fa-arrow-down"></i>
       </div>
-      <div id="dex-cursor-left" class="cursor">
+      <div id="dex-cursor-left" class="cursor" (click)="previousPokemon()">
         <i class="fa fa-arrow-left"></i>
       </div>
     </div>
   </div>
   <div class="dex-right">
-    <div class="dex-stats"></div>
+    <div class="dex-stats">
+      <p><strong>Name: </strong>{{ data.name | titlecase}}</p>
+      <p><strong>Id: </strong>{{ data.id }}</p>
+      <p><strong>Height: </strong>{{ data.height / 10 }} kgs</p>
+      <p><strong>Weight: </strong>{{ data.weight / 10 }} mts</p>
+      <p><strong>Abilities:</strong></p>
+      <ul *ngFor="let abilitie of data.abilities">
+        <li>{{ abilitie.ability.name | titlecase}}</li>
+      </ul>
+    </div>
     <div class="dex-input">
-      <input type="text" />
+      <form #f="ngForm" (ngSubmit)="changePokemon(f.value.id)">
+        <input name="id" type="text" ngModel />
+      </form>
     </div>
     <div class="dex-buttons">
       <div class="button"></div>
@@ -31,7 +44,7 @@
       <div class="button"></div>
     </div>
     <div class="exit-buttons">
-      <div class="button">Home</div>
+      <div class="button" (click)="goHome()">Home</div>
       <div class="button">Sound</div>
     </div>
   </div>
