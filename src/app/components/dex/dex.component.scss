@@ -32,6 +32,12 @@
       border-style: ridge;
       border-color: silver;
       background-color: whitesmoke;
+      text-align: center;
+      img {
+        width: 80%;
+        height: auto;
+
+      }
     }
     .dex-panel-3 {
       grid-column: 2/3;
@@ -77,6 +83,7 @@
       border-style: inset;
       border-color: silver;
       border-radius: 5%;
+      overflow: scroll;
     }
     .dex-input {
       grid-column: 2/3;
@@ -121,7 +128,7 @@
         text-align: center;
         padding-top: 10%;
         margin-top: 10%;
-    }
+      }
     }
   }
 }
