@@ -8,6 +8,7 @@ import { Router } from "@angular/router";
 })
 export class DexComponent implements OnInit {
   @Input() data: any;
+  spriteType: number = 1;
 
   constructor(private router: Router) {
     console.log(this.data);
